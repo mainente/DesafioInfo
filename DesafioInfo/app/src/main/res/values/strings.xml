@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DesafioInfo</string>
+    <string name="toolbar_name">O Globo</string>
+
 </resources>

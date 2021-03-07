@@ -3,7 +3,6 @@ package com.developer.desafioinfo.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.developer.desafioinfo.R
-import com.developer.desafioinfo.ui.ui.noticias.NoticiasFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

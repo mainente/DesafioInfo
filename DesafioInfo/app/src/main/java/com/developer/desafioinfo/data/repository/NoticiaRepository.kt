@@ -13,6 +13,8 @@ class NoticiaRepository @Inject constructor(
 
 
 
+
+
     fun getNoticias() = performGetOperation(
         databaseQuery = { localDataSource.getAllNoticias() },
         networkCall = { remoteDataSource.getNoticias() },
@@ -28,3 +30,6 @@ class NoticiaRepository @Inject constructor(
         }
     )
 }
+
+
+

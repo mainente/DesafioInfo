@@ -1,12 +1,11 @@
 package com.developer.desafioinfo.utils
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
-import androidx.lifecycle.map
+import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 
 fun <T, A> performGetOperation(databaseQuery: () -> LiveData<T>,
                                networkCall: suspend () -> Resource<A>,
                                saveCallResult: suspend (A) -> Unit): LiveData<Resource<T>> =
+
     liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val source = databaseQuery.invoke().map { Resource.success(it) }

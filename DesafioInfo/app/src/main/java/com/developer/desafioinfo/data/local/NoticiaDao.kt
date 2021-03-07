@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.developer.desafioinfo.data.entities.Noticia
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NoticiaDao {

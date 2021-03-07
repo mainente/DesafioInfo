@@ -35,6 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    //DataBinding
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -82,10 +86,12 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //picasso
+    implementation "com.squareup.picasso:picasso:2.71828"
 
-    //Moshi
-    implementation("com.squareup.retrofit2:converter-moshi:$converter_moshi")
-    implementation("com.squareup.moshi:moshi-kotlin:$moshi_kotlin")
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
 
 
 }
