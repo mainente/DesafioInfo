@@ -15,7 +15,7 @@ class NoticiaRepository @Inject constructor(
 
 
 
-    fun getNoticias() = performGetOperation(
+    fun getNoticias(isUpdate: Boolean) = performGetOperation(isUpdate,
         databaseQuery = { localDataSource.getAllNoticias() },
         networkCall = { remoteDataSource.getNoticias() },
         saveCallResult = {

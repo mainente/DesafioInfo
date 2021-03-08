@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:startDestination="@id/noticiasFragment">
+
+
+    <fragment
+        android:id="@+id/noticiasFragment"
+        android:name="com.developer.desafioinfo.ui.NoticiasFragment"
+        tools:layout="@layout/noticias_fragment"
+        android:label="NoticiasFragment" >
+        <action
+            android:id="@+id/action_noticiasFragment_to_noticiaDetalheFragment"
+            app:destination="@id/noticiaDetalheFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticiaDetalheFragment"
+        android:name="com.developer.desafioinfo.ui.NoticiaDetalheFragment"
+        android:label="NoticiaDetalheFragment" />
+</navigation>
