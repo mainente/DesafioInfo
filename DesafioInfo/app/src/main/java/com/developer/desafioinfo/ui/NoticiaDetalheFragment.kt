@@ -53,6 +53,9 @@ class NoticiaDetalheFragment : Fragment() {
             binding.textViewToolbar.text = it
         }
         binding.textViewDataHora.text =   formattedDate(noticia.publicadoEm as String)
+        binding.imvVoltar.setOnClickListener {
+            activity?.onBackPressed()
+        }
 
 
 
