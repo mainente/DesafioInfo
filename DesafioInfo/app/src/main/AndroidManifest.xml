@@ -6,11 +6,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/oglobo_icon"
         android:label="@string/app_name"
         android:name=".MainApplication"
 
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/oglobo_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Infoglobo.NoActionBar">
         <activity android:name=".ui.MainActivity">
