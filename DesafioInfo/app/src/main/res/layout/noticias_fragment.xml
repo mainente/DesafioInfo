@@ -132,6 +132,5 @@
             app:layout_constraintStart_toStartOf="@+id/toolbar"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
             app:srcCompat="@drawable/ic_menu_lateral" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

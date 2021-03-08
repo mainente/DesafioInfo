@@ -40,7 +40,7 @@ class NoticiaDetalheFragment : Fragment() {
             }
         }
 
-        var url: String =  ""
+        var url: String
         if (noticia.imagens!=null && noticia.imagens!!.size>0){
             url = noticia.imagens?.get(0)?.url.toString()
             Picasso.get()

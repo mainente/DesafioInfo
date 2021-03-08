@@ -26,7 +26,7 @@ class MainAdapter(private val noticias: List<Noticia>, onItemClickListener : OnI
         load(binding, noticia)
         binding.conteudo = noticia
 
-        holder.itemView.setOnClickListener { view ->
+        holder.itemView.setOnClickListener { _ ->
             onItemClickListener.onItemClicked(Gson().toJson(noticia))
         }
     }
@@ -34,8 +34,8 @@ class MainAdapter(private val noticias: List<Noticia>, onItemClickListener : OnI
     private fun load(binding: AdapterNoticiaListItemBinding, noticia: Noticia) {
         binding.titulo.text = noticia.titulo
         var url: String?
-        if (noticia.imagens!=null && noticia.imagens!!.size>0){
-            url = noticia.imagens?.get(0)?.url.toString()
+        if (noticia.imagens!=null && noticia.imagens.isNotEmpty()){
+            url = noticia.imagens[0].url.toString()
             Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_image)

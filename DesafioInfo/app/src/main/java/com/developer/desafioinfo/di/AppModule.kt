@@ -1,6 +1,7 @@
 package com.developer.desafioinfo.di
 
 import android.content.Context
+import com.developer.desafioinfo.BuildConfig
 import com.developer.desafioinfo.data.api.NoticiasApi
 import com.developer.desafioinfo.data.api.NoticiasRemoteDataSource
 import com.developer.desafioinfo.data.entities.Noticia
@@ -29,7 +30,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient) : Retrofit = Retrofit.Builder()
-        .baseUrl("https://raw.githubusercontent.com/Infoglobo/desafio-apps/master/")
+        .baseUrl(BuildConfig.API_URL)
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(okHttpClient)
         .build()

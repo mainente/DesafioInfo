@@ -107,8 +107,8 @@ class NoticiasFragment : Fragment(), OnItemClickListener {
         binding.textViewTitulo.text = conteudo.titulo
         binding.textViewSecaoNome.text = conteudo.secao?.nome
         var url: String?
-        if (conteudo.imagens!=null && conteudo.imagens!!.size>0){
-            url = conteudo.imagens?.get(0)?.url.toString()
+        if (conteudo.imagens!=null && conteudo.imagens.isNotEmpty()){
+            url = conteudo.imagens[0].url.toString()
             Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_image)
